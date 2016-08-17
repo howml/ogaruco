@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="apple-touch-icon-precomposed" href="images/icon2.png" />
+<title>OGARU - オガル -</title>
+<link rel="stylesheet" href="css/ogaru.css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+</head>
+<body>
+<ul class="menu">
+	<li id="day0" class="active">
+		<h2 class="menu-date"></h2>
+		<div class="menu">
+			<div id="menu-main"></div>
+			<div id="menu-side1"></div>
+			<div id="menu-side2"></div>
+			<div id="menu-soup"></div>
+			<div id="menu-other"></div>
+			<div id="menu-drink"></div>
+		</div>
+	</li>
+	<li id="day1">
+		<h2 class="menu-date"></h2>
+	</li>
+	<li id="day2">
+		<h2 class="menu-date"></h2>
+	</li>
+	<li id="day3">
+		<h2 class="menu-date"></h2>
+	</li>
+	<li id="day4">
+		<h2 class="menu-date"></h2>
+	</li>
+	<li id="day5">
+		<h2 class="menu-date"></h2>
+	</li>
+	<li id="day6">
+		<h2 class="menu-date"></h2>
+	</li>
+</ul>
+<script src="js/moment-with-locales.js"></script>
+<script>
+moment().format();
+moment.locale('ja');
+</script>
+<script src="js/ogaru.js"></script>
+</body>
+</html>

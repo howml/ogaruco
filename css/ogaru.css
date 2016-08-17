@@ -1,0 +1,61 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic);
+
+html {
+	height: 100%;
+}
+body{
+	height: 100%;
+	margin: 0;
+	font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "ü‡ÉSÉVÉbÉN" , "Yu Gothic" , "ü‡ÉSÉVÉbÉNëÃ" , "YuGothic" , "ÉqÉâÉMÉmäpÉS Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "ÉÅÉCÉäÉI" , Meiryo , "ÇlÇr ÇoÉSÉVÉbÉN" , "MS PGothic" , sans-serif;
+}
+ul {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	font-size: 1em;
+	font-weight: bold;
+}
+li {
+	list-style-type : none;
+	margin: 0;
+	padding: 5px 10px;
+	flex-grow: 1;
+}
+li h2.menu-date {
+	margin: 0;
+	font-size: 1.2em;
+}
+li.active {
+	flex-grow: 5;
+}
+li.active div.menu {
+	padding: 0 15px;
+}
+li#day0, li#day5 {
+	color: #ffffff;
+	background: #d65760;
+}
+li#day1, li#day6 {
+	color: #ffffff;
+	background: #e68d7b;
+}
+li#day2 {
+	color: #ffffff;
+	background: #d3c677;
+}
+li#day3 {
+	color: #ffffff;
+	background: #93a841;
+}
+li#day4 {
+	color: #ffffff;
+	background: #d9b561;
+}
