@@ -29,9 +29,16 @@ li {
 	padding: 5px 10px;
 	flex-grow: 1;
 }
+
 li h2.menu-date {
 	margin: 0;
 	font-size: 1.2em;
+}
+
+#top{
+	color: #ffffff;
+	background: #93c2b2;
+	text-align:center;
 }
 li.active {
 	flex-grow: 5;
@@ -39,23 +46,31 @@ li.active {
 li.active div.menu {
 	padding: 0 15px;
 }
-li#day0, li#day5 {
-	color: #ffffff;
-	background: #d65760;
+li#day0 {
+	color: #9E9E9E;
+	background: #E0E0E0;
 }
-li#day1, li#day6 {
+li#day1 {
 	color: #ffffff;
-	background: #e68d7b;
+	background: #F48FB1;
 }
 li#day2 {
 	color: #ffffff;
-	background: #d3c677;
+	background: #F06292;
 }
 li#day3 {
 	color: #ffffff;
-	background: #93a841;
+	background: #EC407A;
 }
 li#day4 {
 	color: #ffffff;
-	background: #d9b561;
+	background: #E91E63;
+}
+li#day5 {
+	color: #ffffff;
+	background: #D81B60;
+}
+li#day6 {
+	color: #ffffff;
+	background: #C2185B;
 }
