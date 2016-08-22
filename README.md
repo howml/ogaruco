@@ -27,10 +27,18 @@ Linkdataの[OGARUCO](http://linkdata.org/work/rdf1s3453i)ページにサンプ�
 データセット情報のテーブルデータ(Excel)をダウンロードするとエクセルファイルがダウンロードできますので、これに入力し、Linkdataへアップしてください。
 
 その後、ogaru.jsデータの上部にあるIdDatasetをLinkdataのIDへと変更します。
-URLのhttp://linkdata.org/work/rdf1s3453i←この部分
+URLのlinkdata.org/work/rdf1s3453i←この部分
 
 これで基本的には動きます。
 ただ、現状は独自ドメインでしか動かない仕様になっていますので、正式公開の際にはなにか考えます。
+現状はあくまでベータ版です。細かな修正等が発生する可能性がございますのでご了承ください。
+
+##おねがい
+こんな感じで直したよ!こんな機能いれてみたよ!などがありましたら是非OGARUCOでも使わせてください。
+その際には[ハウモリ](https://www.facebook.com/howml/)のFacebookページにご連絡いただければ嬉しいです。
 
 ##サンプル
 OGARUCOのサンプルは[OGARUCOβ版](http://ogaruco.howml.org)をご確認ください。
+
+##スペシャルサンクス
+OGARUCOはハウモリだけの力では制作不可能でした。プロトタイプを作ってくださった新さん、現在の形まで制作してくださったCfSの川人さん(aka [ダッピスタジオ](http://www.dappi.jp))さんに多大なる感謝を
