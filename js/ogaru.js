@@ -1,3 +1,4 @@
+//Linkdataのデータセットのコードを入力
 var ldDataset = 'rdf1s3453i';
 var dIdx = 3;
 var dispDays = 7;
