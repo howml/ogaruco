@@ -1,5 +1,5 @@
 // LinkdataのデータセットIDを入力
-var ldDataset = 'rdf1s3453i';
+var ldDataset = 'rdf1s4545i';
 // Linkdataのファイル名をデータに合わせ変更ogaru_の場所
 var tableName = 'ogaru_' + yyyy_m;
 var dIdx = 3;
