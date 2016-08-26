@@ -4,7 +4,7 @@ var dIdx = 3;
 var dispDays = 7;
 
 var menuData = [];
-var menuIdx = 0;
+var menuIdx = 3;
 var todayYyyyM;
 var todayDInt;
 var nextMonthYyyyM;
@@ -70,7 +70,7 @@ function linkDataError(error) {
 function getMenuFromLinkData(yyyy_m) {
 	return new Promise(function(resolve, reject){
 		var tableName = 'ogaru_' + yyyy_m;
-		var dataUrl = '//linkdata.org/api/1/' + ldDataset + '/' + tableName + '_tsv.txt';
+		var dataUrl = 'http://linkdata.org/api/1/' + ldDataset + '/' + tableName + '_tsv.txt';
 		$.ajax ({
 			type:'GET',
 			url: dataUrl,
@@ -87,7 +87,7 @@ function getMenuFromLinkData(yyyy_m) {
 
 function writeFirstDay() {
 	// 今日の分だけメニューを書く
-	setMenuToTarget(0);
+	setMenuToTarget(3);
 }
 
 function setDateLabel(targetIdx) {
@@ -115,6 +115,9 @@ function setMenuToTarget(targetIdx) {
 	}
 	if (menuData[targetIdx][10] != undefined) {
 		divMenu.append($('<div>' + menuData[targetIdx][10]  + '<div>'));
+	}
+	if (menuData[targetIdx][11] != undefined) {
+		divMenu.append($('<div>' + menuData[targetIdx][11]  + '<div>'));
 	}
 	$(targetLi).append(divMenu);
 }
