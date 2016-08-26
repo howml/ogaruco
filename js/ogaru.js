@@ -117,7 +117,7 @@ function setMenuToTarget(targetIdx) {
 		divMenu.append($('<div>' + menuData[targetIdx][10]  + '<div>'));
 	}
 	if (menuData[targetIdx][11] != undefined) {
-		divMenu.append($('<div>' + menuData[targetIdx][11]  + '<div>'));
+		divMenu.append($('<div>【' + menuData[targetIdx][11]  + '】<div>'));
 	}
 	$(targetLi).append(divMenu);
 }
