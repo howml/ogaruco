@@ -6,7 +6,7 @@ html {
 body{
 	height: 100%;
 	margin: 0;
-	font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "ŸàƒSƒVƒbƒN" , "Yu Gothic" , "ŸàƒSƒVƒbƒN‘Ì" , "YuGothic" , "ƒqƒ‰ƒMƒmŠpƒS Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "ƒƒCƒŠƒI" , Meiryo , "‚l‚r ‚oƒSƒVƒbƒN" , "MS PGothic" , sans-serif;
+	font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "æ¸¸ã‚´ã‚·ãƒƒã‚¯" , "Yu Gothic" , "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“" , "YuGothic" , "ãƒ’ãƒ©ã‚®ãƒè§’ã‚´ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "ãƒ¡ã‚¤ãƒªã‚ª" , Meiryo , "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯" , "MS PGothic" , sans-serif;
 }
 ul {
 	height: 100%;
@@ -47,24 +47,24 @@ li.active div.menu {
 	padding: 0 15px;
 }
 li#day0 {
-	color: #9E9E9E;
-	background: #E0E0E0;
+	color: #ffffff;
+	background: #C2185B;
 }
 li#day1 {
 	color: #ffffff;
-	background: #F48FB1;
+	background: #D81B60;
 }
 li#day2 {
 	color: #ffffff;
-	background: #F06292;
+	background: #EC407A;
 }
 li#day3 {
 	color: #ffffff;
-	background: #EC407A;
+	background: #F48FB1;
 }
 li#day4 {
 	color: #ffffff;
-	background: #E91E63;
+	background: #EC407A;
 }
 li#day5 {
 	color: #ffffff;
