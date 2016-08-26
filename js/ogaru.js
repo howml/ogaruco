@@ -4,7 +4,7 @@ var dIdx = 3;
 var dispDays = 7;
 
 var menuData = [];
-var menuIdx = 3;
+var menuIdx = 0;
 var todayYyyyM;
 var todayDInt;
 var nextMonthYyyyM;
@@ -123,12 +123,9 @@ function setMenuToTarget(targetIdx) {
 }
 
 $(function() {
-	var now = moment();
-
-	// stub
-	// now = moment('2016-8-18', 'YYYY-M-D');
-
-	var menu = getMenu(now);
+	var mmt = moment();
+	mmt.subtract(3, 'days');
+	var menu = getMenu(mmt);
 });
 
 $('.menu li').click(function() {
