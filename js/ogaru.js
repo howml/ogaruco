@@ -1,7 +1,5 @@
 // LinkdataのデータセットIDを入力
 var ldDataset = 'rdf1s4545i';
-// Linkdataのファイル名をデータに合わせ変更ogaru_の場所
-var tableName = 'ogaru_' + yyyy_m;
 var dIdx = 3;
 var dispDays = 7;
 
@@ -71,6 +69,7 @@ function linkDataError(error) {
 
 function getMenuFromLinkData(yyyy_m) {
 	return new Promise(function(resolve, reject){
+		var tableName = 'ogaru_' + yyyy_m;
 		var dataUrl = '//linkdata.org/api/1/' + ldDataset + '/' + tableName + '_tsv.txt';
 		$.ajax ({
 			type:'GET',
