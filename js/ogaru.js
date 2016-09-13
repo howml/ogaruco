@@ -119,8 +119,11 @@ function setMenuToTarget(targetIdx) {
 	if (menuData[targetIdx][11] != undefined) {
 		divMenu.append($('<div><br>' + menuData[targetIdx][11]  + '<div>'));
 	}
+	divMenu.append($('<a href="https://www.google.com/calendar/gp?pli=1#~calendar:view=e&bm=1&action=TEMPLATE&text=オガルコリマインダー&dates=' + menuData[targetIdx][1] + menuData[targetIdx][2] + menuData[targetIdx][3] + '/' + menuData[targetIdx][1] + menuData[targetIdx][2] + menuData[targetIdx][3] + '&details=' + menuData[targetIdx][5] + '%0D%0A' + menuData[targetIdx][6] + '%0D%0A' + menuData[targetIdx][7] + '%0D%0A' + menuData[targetIdx][8] + '%0D%0A' + menuData[targetIdx][9] + '%0D%0A' + menuData[targetIdx][10] + '%0D%0A' + menuData[targetIdx][11] + '%0D%0A' + '&trp=undefined&trp=true&sprop=" target="_blank">Googleカレンダーに登録</a>'));
 	$(targetLi).append(divMenu);
 }
+
+
 
 $(function() {
 	var mmt = moment();
