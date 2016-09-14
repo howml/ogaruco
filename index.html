@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="apple-touch-icon-precomposed" href="img/image.png" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+ <link rel="apple-touch-icon-precomposed" href="img/image.png" />
 <title>オガルコ</title>
-<link rel="stylesheet" href="css/ogaru.css">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="css/ogaru.css">
+    <!--  Scripts-->
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
 </head>
 <body>
-<div id="top">OGARUCO ベータ版</div>
-<ul class="menu">
+  <nav class="teal accent-4" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">OGARUCO</a>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="about.html">オガルコってなに</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div> 
+  </nav>
+ 
+<div class="menu">
+<ul>
 	<li id="day0">
 		<h2 class="menu-date"></h2>
 	</li>
@@ -23,14 +40,6 @@
 	</li>
 	<li id="day3" class="active">
 		<h2 class="menu-date"></h2>
-		<div class="menu">
-			<div id="menu-main"></div>
-			<div id="menu-side1"></div>
-			<div id="menu-side2"></div>
-			<div id="menu-soup"></div>
-			<div id="menu-other"></div>
-			<div id="menu-drink"></div>
-		</div>
 	</li>
 	<li id="day4">
 		<h2 class="menu-date"></h2>
@@ -42,11 +51,18 @@
 		<h2 class="menu-date"></h2>
 	</li>
 </ul>
+</div>
+
+
+
 <script src="js/moment-with-locales.js"></script>
 <script>
 moment().format();
 moment.locale('ja');
 </script>
 <script src="js/ogaru.js"></script>
-</body>
+
+
+
+  </body>
 </html>
