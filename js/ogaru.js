@@ -99,31 +99,41 @@ function setMenuToTarget(targetIdx) {
 	var targetLi = $('li#day' + targetIdx);
 	var divMenu = $('<div class="menu">');
 	if (menuData[targetIdx][5] != undefined) {
-		divMenu.append($('<div>' + menuData[targetIdx][5]  + '<div>'));
+		divMenu.append($('<div>' + menuData[targetIdx][5]  + '</div>'));
 	}
 	if (menuData[targetIdx][6] != undefined) {
-		divMenu.append($('<div>' + menuData[targetIdx][6]  + '<div>'));
+		divMenu.append($('<div>' + menuData[targetIdx][6]  + '</div>'));
 	}
 	if (menuData[targetIdx][7] != undefined) {
-		divMenu.append($('<div>' + menuData[targetIdx][7]  + '<div>'));
+		divMenu.append($('<div>' + menuData[targetIdx][7]  + '</div>'));
 	}
 	if (menuData[targetIdx][8] != undefined) {
-		divMenu.append($('<div>' + menuData[targetIdx][8]  + '<div>'));
+		divMenu.append($('<div>' + menuData[targetIdx][8]  + '</div>'));
 	}
 	if (menuData[targetIdx][9] != undefined) {
-		divMenu.append($('<div>' + menuData[targetIdx][9]  + '<div>'));
+		divMenu.append($('<div>' + menuData[targetIdx][9]  + '</div>'));
 	}
 	if (menuData[targetIdx][10] != undefined) {
-		divMenu.append($('<div>' + menuData[targetIdx][10]  + '<div>'));
+		divMenu.append($('<div>' + menuData[targetIdx][10]  + '</div>'));
 	}
 	if (menuData[targetIdx][11] != undefined) {
-		divMenu.append($('<div>' + menuData[targetIdx][11]  + '<div>'));
+		divMenu.append($('<div>' + menuData[targetIdx][11]  + '</div>'));
 	}
-	divMenu.append($('<a href="https://www.google.com/calendar/gp?pli=1#~calendar:view=e&bm=1&action=TEMPLATE&text=オガルコリマインダー&dates=' + menuData[targetIdx][1] + menuData[targetIdx][2] + menuData[targetIdx][3] + '/' + menuData[targetIdx][1] + menuData[targetIdx][2] + menuData[targetIdx][3] + '&details=' + menuData[targetIdx][5] + '%0D%0A' + menuData[targetIdx][6] + '%0D%0A' + menuData[targetIdx][7] + '%0D%0A' + menuData[targetIdx][8] + '%0D%0A' + menuData[targetIdx][9] + '%0D%0A' + menuData[targetIdx][10] + '%0D%0A' + menuData[targetIdx][11] + '%0D%0A' + '&trp=undefined&trp=true&sprop=" target="_blank">Googleカレンダーに登録</a>'));
-	$(targetLi).append(divMenu);
+	var monthslice = (("0" + menuData[targetIdx][2]).slice(-2));
+	var MailDate = menuData[targetIdx][1] + monthslice + menuData[targetIdx][3];
+	divMenu.append($('<div><a href="https://www.google.com/calendar/gp?pli=1#~calendar:view=e&bm=1&action=TEMPLATE&text=オガルコリマインダー&dates=' + 
+	MailDate + '/' + MailDate + 
+	'&details=' + 
+	menuData[targetIdx][5] + '%0D%0A' + 
+	menuData[targetIdx][6] + '%0D%0A' + 
+	menuData[targetIdx][7] + '%0D%0A' + 
+	menuData[targetIdx][8] + '%0D%0A' + 
+	menuData[targetIdx][9] + '%0D%0A' + 
+	menuData[targetIdx][10] + '%0D%0A' + 
+	menuData[targetIdx][11] + '%0D%0A' +  
+	'&trp=undefined&trp=true&sprop=" class="waves-effect waves-light btn" target="_blank">Googleカレンダーに登録</a></div>'));
+	 $(targetLi).append(divMenu);
 }
-
-
 
 $(function() {
 	var mmt = moment();
