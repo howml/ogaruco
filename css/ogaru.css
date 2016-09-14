@@ -7,14 +7,9 @@ body{
 	height: 100%;
 	margin: 0;
 	font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
-	background: #fff3e0;
 }
-.menu{
-	height: 90%;
-	padding: 10px 20px 0 20px;
-	}
-.menu a{margin-top:10px;}
-.menu ul{
+ul {
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	display: -webkit-box;
@@ -31,7 +26,7 @@ body{
 li {
 	list-style-type : none;
 	margin: 0;
-	padding: 20px 20px;
+	padding: 5px 10px;
 	flex-grow: 1;
 }
 
@@ -52,37 +47,30 @@ li.active div.menu {
 	padding: 0 15px;
 }
 li#day0 {
-	color: #90a4ae;
-	background: #fff3e0;
+	color: #ffffff;
+	background: #C2185B;
 }
 li#day1 {
-	border-top: solid 1px #cfd8dc;
-	color: #90a4ae;
-	background: #fff3e0;
+	color: #ffffff;
+	background: #D81B60;
 }
 li#day2 {
-	border-top: solid 1px #cfd8dc;
-	color: #90a4ae;
-	background: #fff3e0;
+	color: #ffffff;
+	background: #EC407A;
 }
 li#day3 {
-	border-top: solid 1px #cfd8dc;
-	color: #90a4ae;
-	background: #fff3e0;
+	color: #ffffff;
+	background: #F48FB1;
 }
 li#day4 {
-	border-top: solid 1px #cfd8dc;
-	color: #90a4ae;
-	background: #fff3e0;
+	color: #ffffff;
+	background: #EC407A;
 }
 li#day5 {
-	border-top: solid 1px #cfd8dc;
-	color: #90a4ae;
-	background: #fff3e0;
+	color: #ffffff;
+	background: #D81B60;
 }
-
 li#day6 {
-	border-top: solid 1px #cfd8dc;
-	color: #90a4ae;
-	background: #fff3e0;
+	color: #ffffff;
+	background: #C2185B;
 }
