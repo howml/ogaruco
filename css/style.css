@@ -1,0 +1,56 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+html {
+    height: 100%;
+    margin: 0;
+}
+body{
+    height: 100%;
+    margin: 0;
+    font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+} 
+
+.icon-block {
+    padding: 0 15px;
+}
+.icon-block .material-icons {
+    font-size: inherit;
+}
+header, main, footer {
+    padding-left: 300px
+}
+nav {
+    height: 136px;
+    line-height: 136px
+}
+.navbar-fixed {
+    position: relative;
+    height: 125px;
+    z-index: 998
+}
+.navbar-fixed nav {
+    position: fixed
+}
+
+@media only screen and (max-width: 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 64px;
+        line-height: 64px
+    }
+    .navbar-fixed {
+        height: 56px
+    }
+}
+
