@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
- <link rel="apple-touch-icon-precomposed" href="img/image.png" />
-<title>オガルコ</title>
-  
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="stylesheet" href="css/ogaru.css">
-    <!--  Scripts-->
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<link rel="apple-touch-icon-precomposed" href="img/image.png" />
+	<title>オガルコ</title>
+<!-- CSS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link rel="stylesheet" href="css/ogarucocal.css">
+<!-- Scripts -->
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/init.js"></script>
 </head>
 <body>
-  <nav class="teal accent-4" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">OGARUCO</a>
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="about.html">オガルコってなに</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div> 
-  </nav>
- 
-    <div class="container">
-      <br><br>
+<header>
+<div class="navbar-fixed">
+    <nav class="teal accent-4" role="navigation">
+		<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">OGARUCO</a>
+			<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>	
+			<ul id="slide-out" class="side-nav fixed">
+				<li><div class="userView">
+					<img class="background" width="300px" height="300px" src="img/navimage.png">
+					<a href="https://www.facebook.com/howml/"><img class="circle" src="img/howml.png"></a>
+					<span class="white-text name">OGARUCO</span>
+				</div></li>
+				<li><a class="waves-effect" href="index.html">オガルコ献立</a></li>
+				<li><a class="waves-effect" href="cal.html">オガルコカレンダー</a></li>
+				<li><a class="waves-effect" href="about.html">オガルコについて</a></li>
+			</ul>
+		</div> 
+	</nav>
+</div>
+</header>
+	<main>
       <h1 class="header center orange-text">OGARUCOとは</h1>
       <div class="row center">
         <p>ノーモア 昼夜連続カレー<br>
@@ -45,13 +53,6 @@
         <p>OGARUCOはハウモリだけの力では制作不可能でした。<br>プロトタイプを作ってくださった新さん、現在の形まで制作してくださったCfSの川人さん(aka ダッピスタジオ)さんに多大なる感謝を</p>
         <p>オガルコのUIは、僕たちが大好きな美しいUI、Code for Kanazawaさんが制作した5374(ゴミナシ)をオマージュし制作しています。</p>
         </div>
-      <br><br>
-
-    </div>
-
-
-
-
-
-  </body>
+    </main>
+</body>
 </html>

@@ -86,18 +86,42 @@ function getMenuFromLinkData(yyyy_m) {
 }
 
 function writeFirstDay() {
-	// 今日の分だけメニューを書く
+	// メニューを書く
+		setMenuToTarget(0);
+		setMenuToTarget(1);
+		setMenuToTarget(2);
 	setMenuToTarget(3);
+			setMenuToTarget(4);
+					setMenuToTarget(5);
+							setMenuToTarget(6);
 }
 
 function setDateLabel(targetIdx) {
-	var targetDateDiv = $('li#day' + targetIdx + ' h2.menu-date');
+	var targetDateDiv = $('li#day' + targetIdx + ' .days');
 	targetDateDiv.text(menuData[targetIdx][2] + '/' + menuData[targetIdx][3] + ' (' + menuData[targetIdx][4] + ')');
+	var targetSpecialDiv = $('li#day' + targetIdx + ' .special');
+	if (menuData[targetIdx][11] != undefined) {
+			targetSpecialDiv.text(menuData[targetIdx][11]);	
+	}
+	var targetGcalDiv = $('li#day' + targetIdx + ' .gcal');	
+	var monthslice = (("0" + menuData[targetIdx][2]).slice(-2));
+	var MailDate = menuData[targetIdx][1] + monthslice + menuData[targetIdx][3];
+	targetGcalDiv.html('<a href="https://www.google.com/calendar/gp?pli=1#~calendar:view=e&bm=1&action=TEMPLATE&text=オガルコリマインダー&dates=' + 
+	MailDate + '/' + MailDate + 
+	'&details=' + 
+	menuData[targetIdx][5] + '%0D%0A' + 
+	menuData[targetIdx][6] + '%0D%0A' + 
+	menuData[targetIdx][7] + '%0D%0A' + 
+	menuData[targetIdx][8] + '%0D%0A' + 
+	menuData[targetIdx][9] + '%0D%0A' + 
+	menuData[targetIdx][10] + '%0D%0A' + 
+	menuData[targetIdx][11] + '%0D%0A' +  
+	'&trp=undefined&trp=true&sprop=" target="_blank"><i class="material-icons">today</i></a>');
 }
 
 function setMenuToTarget(targetIdx) {
 	var targetLi = $('li#day' + targetIdx);
-	var divMenu = $('<div class="menu">');
+	var divMenu = $('<div class="collapsible-body">');
 	if (menuData[targetIdx][5] != undefined) {
 		divMenu.append($('<div>' + menuData[targetIdx][5]  + '</div>'));
 	}
@@ -119,19 +143,6 @@ function setMenuToTarget(targetIdx) {
 	if (menuData[targetIdx][11] != undefined) {
 		divMenu.append($('<div>' + menuData[targetIdx][11]  + '</div>'));
 	}
-	var monthslice = (("0" + menuData[targetIdx][2]).slice(-2));
-	var MailDate = menuData[targetIdx][1] + monthslice + menuData[targetIdx][3];
-	divMenu.append($('<div><a href="https://www.google.com/calendar/gp?pli=1#~calendar:view=e&bm=1&action=TEMPLATE&text=オガルコリマインダー&dates=' + 
-	MailDate + '/' + MailDate + 
-	'&details=' + 
-	menuData[targetIdx][5] + '%0D%0A' + 
-	menuData[targetIdx][6] + '%0D%0A' + 
-	menuData[targetIdx][7] + '%0D%0A' + 
-	menuData[targetIdx][8] + '%0D%0A' + 
-	menuData[targetIdx][9] + '%0D%0A' + 
-	menuData[targetIdx][10] + '%0D%0A' + 
-	menuData[targetIdx][11] + '%0D%0A' +  
-	'&trp=undefined&trp=true&sprop=" class="waves-effect waves-light btn" target="_blank">Googleカレンダーに登録</a></div>'));
 	 $(targetLi).append(divMenu);
 }
 
@@ -139,13 +150,4 @@ $(function() {
 	var mmt = moment();
 	mmt.subtract(3, 'days');
 	var menu = getMenu(mmt);
-});
-
-$('.menu li').click(function() {
-	$('.menu li.active div.menu').remove();
-	$('.menu li.active').removeClass('active');
-	$(this).addClass('active');
-	var idName = $(this).attr("id");
-	var targetIdx = idName.substr(3);
-	setMenuToTarget(targetIdx);
 });
