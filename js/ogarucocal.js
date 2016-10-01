@@ -1,3 +1,9 @@
+//! ogarucocal.js
+//! version : 1.0
+//! authors : howmori
+//! license : MIT
+//! howml.org
+
 // LinkdataのデータセットIDを入力
 var dataUrl = 'http://linkdata.org/api/1/rdf1s4558i/child_jigyo_013455_2016_tsv.txt';
 		

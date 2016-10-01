@@ -1,3 +1,9 @@
+//! ogaruco.js
+//! version : 1.0
+//! authors : howmori
+//! license : MIT
+//! howml.org
+
 // LinkdataのデータセットIDを入力
 var ldDataset = 'rdf1s4545i';
 var dIdx = 3;
