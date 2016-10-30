@@ -54,10 +54,15 @@ padding:0;
 }
 
 div #apps {
-  background-image: url(../img/grey.jpg);
-  background-attachment: fixed;
+    background-image: url(../img/grey.jpg);
+    background-attachment: fixed;
+    background-position:center;
     margin:0;
-    padding: 0 0 5rem 0;    
+    padding: 0 0 5rem 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    
 }
 
 
