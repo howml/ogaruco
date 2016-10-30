@@ -43,7 +43,7 @@ header.masthead .mh-slider {
 }
 
 #slider {
-  background: url(../img/bk.jpg) no-repeat center center scroll;
+  background-image: url(../img/bk.jpg);
   overflow: hidden;
   background-attachment: fixed;
   position: relative;
@@ -499,7 +499,7 @@ section#screenshots .owl-carousel .owl-item {
   margin: 0 15px;
 }
 section#packages {
-  background: url(../img/grey.jpg) no-repeat center center scroll;
+  background-image: url(../img/grey.jpg);
   background-attachment: fixed;
 }
 section#packages .section-heading h3 {
