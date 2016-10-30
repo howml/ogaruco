@@ -104,8 +104,9 @@ function setDateLabel(targetIdx) {
 	var targetDateDiv = $('li#day' + targetIdx + ' .days');
 	targetDateDiv.html(menuData[targetIdx][2] + '/' + menuData[targetIdx][3] + '<span class="coll-h-desc">' + menuData[targetIdx][4] + '</span>');
 	var targetGcalDiv = $('li#day' + targetIdx + ' .gcal');	
-	var monthslice = (("0" + menuData[targetIdx][2]).slice(-2));
-	var MailDate = menuData[targetIdx][1] + monthslice + menuData[targetIdx][3];
+	var monthSlice = (("0" + menuData[targetIdx][2]).slice(-2));
+	var daySlice = (("0" + menuData[targetIdx][3]).slice(-2));
+	var MailDate = menuData[targetIdx][1] + monthSlice + daySlice;
 	targetGcalDiv.html('<a href="https://www.google.com/calendar/gp?pli=1#~calendar:view=e&bm=1&action=TEMPLATE&text=オガルコリマインダー&dates=' + 
 	MailDate + '/' + MailDate + 
 	'&details=' + 
