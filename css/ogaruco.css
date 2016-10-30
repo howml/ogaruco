@@ -54,7 +54,7 @@ padding:0;
 }
 
 div #apps {
-  background: url(../img/grey.jpg) no-repeat center center scroll;
+  background-image: url(../img/grey.jpg);
   background-attachment: fixed;
     margin:0;
     padding: 0 0 5rem 0;    
