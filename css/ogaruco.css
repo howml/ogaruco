@@ -78,3 +78,10 @@ section#packages .section-heading p {
 section#packages .section-heading h3 span {
   color: #25a7b4;
 }
+
+
+@media screen and (min-width: 768px) {
+   #slider, #apps, section#packages {    
+    background-attachment: fixed;
+  }
+}

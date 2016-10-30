@@ -46,7 +46,7 @@ header.masthead .mh-slider {
   background-image: url(../img/bk.jpg);
   overflow: hidden;
   background-attachment: fixed;
-  background-position:center;
+  background-position:center center;
   position: relative;
   text-align: center;
 }
@@ -502,7 +502,7 @@ section#screenshots .owl-carousel .owl-item {
 section#packages {
   background-image: url(../img/grey.jpg);
   background-attachment: fixed;
-  background-position:center;
+  background-position:center center;
 }
 section#packages .section-heading h3 {
   color: #555555;
