@@ -1,0 +1,18 @@
+html, body, #wrap, main{
+height: 100%;
+width:100%;
+} 
+.container{
+height: 100%;
+    
+}
+iframe{
+height: 90%;
+width:100%;
+}
+.icon-block {
+    padding: 0 15px;
+}
+.icon-block .material-icons {
+    font-size: inherit;
+}

@@ -1,59 +1,121 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-	<link rel="apple-touch-icon-precomposed" href="img/image.png" />
-	<title>オガルコ</title>
-<!-- CSS -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link rel="stylesheet" href="css/ogarucocal.css">
-<!-- Scripts -->
-	<script src="js/jquery-2.1.1.min.js"></script>
-	<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
-	<script src="js/materialize.min.js"></script>
-	<script src="js/init.js"></script>
-</head>
-<body>
-<header>
-<div class="navbar-fixed">
-    <nav class="teal accent-4" role="navigation">
-		<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">OGARUCO</a>
-			<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>	
-			<ul id="slide-out" class="side-nav fixed">
-				<li><div class="userView">
-					<img class="background" width="300px" height="300px" src="img/navimage.png">
-					<a href="https://www.facebook.com/howml/"><img class="circle" src="img/howml.png"></a>
-					<span class="white-text name">OGARUCO</span>
-				</div></li>
-				<li><a class="waves-effect" href="index.html">オガルコ献立</a></li>
-				<li><a class="waves-effect" href="cal.html">オガルコカレンダー</a></li>
-				<li><a class="waves-effect" href="about.html">オガルコについて</a></li>
-				<li><a class="waves-effect" href="bkmark.html">ホームに追加しよう!</a></li>
-			</ul>
-		</div> 
-	</nav>
-</div>
-</header>
-	<main>
-        <ul class="collapsible" data-collapsible="accordion">
-            <li id="day0"><div class="collapsible-header"><span class="days"></span><span class="gcal"></span></div></li>
-            <li id="day1"><div class="collapsible-header"><span class="days"></span><span class="gcal"></span></div></li>
-            <li id="day2"><div class="collapsible-header"><span class="days"></span><span class="gcal"></span></div></li>
-            <li id="day3"><div class="collapsible-header"><span class="days"></span><span class="gcal"></span></div></li>
-            <li id="day4"><div class="collapsible-header"><span class="days"></span><span class="gcal"></span></div></li>
-            <li id="day5"><div class="collapsible-header"><span class="days"></span><span class="gcal"></span></div></li>
-            <li id="day6"><div class="collapsible-header"><span class="days"></span><span class="gcal"></span></div></li>
-        </ul>
-    </main>
+    <title>オガルコ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="favicon.ico">
+<!-- BASE CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <!-- OGARUCO CSS -->
+ 	<link rel="stylesheet" href="css/ogarucocal.css">
  <!-- Scripts -->
+    <script src="js/modernizr.custom.32033.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+	<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+</head>
+
+<body>
+
+    <div class="pre-loader">
+        <div class="load-con">
+            <img src="img/logo.png" width="100px" class="animated fadeInDown" alt="">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+        <header class="masthead">
+
+            <!-- Fixed navbar -->
+            <div class="navbar navbar-static-top" id="nav" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="fa fa-align-justify"></i>
+                        </button>
+                        <a class="navbar-brand" href="#slider">
+                            <img src="img/logo.png" width="40px" alt="">
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav social hidden-xs hidden-sm">
+                            <li><a href="https://twitter.com/HOWML"><i class="fa fa-twitter fa-lg fa-fw"></i></a></li>
+                            <li><a href="https://www.facebook.com/howml/"><i class="fa fa-facebook fa-lg fa-fw"></i></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#apps">献立ビューア</a></li>
+                            <li class="active"><a href="cal.html">健診カレンダー</a></li>
+                            <li><a href="papamama.html">保育園マップ</a></li>
+                            <li><a href="about.html">オガルコとは</a></li>
+                            <li><a href="bkmark.html">オガルコをホームに登録</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!--/.container -->
+            </div>
+            <!--/.navbar -->    
+        </header>
+        <section id="packages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-2 clearfix">
+                        <div class="section-heading scrollpoint sp-effect3">
+                            <h3>オガルコ<span> 健診カレンダー</span></h3>
+                            <span class="divider"></span>
+                            <p>お子さんのすこやかな成長のために</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                	<div id="ogaruco" class="panel-group">
+                    <div id="day0" class="scrollpoint sp-effect6 panel"><span class="days"></span><div id="lg0" class="panel-collapse collapse"></div></div>
+                    <div id="day1" class="scrollpoint sp-effect6 panel"><span class="days"></span><div id="lg1" class="panel-collapse collapse"></div></div>
+                    <div id="day2" class="scrollpoint sp-effect6 panel"><span class="days"></span><div id="lg2" class="panel-collapse collapse"></div></div>
+                    <div id="day3" class="scrollpoint sp-effect6 panel"><span class="days"></span><div id="lg3" class="panel-collapse collapse"></div></div>
+                    <div id="day4" class="scrollpoint sp-effect6 panel"><span class="days"></span><div id="lg4" class="panel-collapse collapse"></div></div>
+                    <div id="day5" class="scrollpoint sp-effect6 panel"><span class="days"></span><div id="lg5" class="panel-collapse collapse"></div></div>
+                    <div id="day6" class="scrollpoint sp-effect6 panel"><span class="days"></span><div id="lg6" class="panel-collapse collapse"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ <!-- OGARUCO Scripts -->
     <script src="js/moment-with-locales.js"></script>
     <script>
         moment().format();
         moment.locale('ja');
     </script>
     <script src="js/ogarucocal.js"></script>
+     <!-- jQuery REVOLUTION Slider  -->
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>   
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            appMaster.preLoader();
+        });
+    </script>
 </body>
 </html>

@@ -1,14 +1,14 @@
 //! ogaruco.js
-//! version : 1.0
+//! version : 1.1
 //! authors : howmori
 //! license : MIT
 //! howml.org
 
 // LinkdataのデータセットIDを入力
 var ldDataset = 'rdf1s4545i';
+
 var dIdx = 3;
 var dispDays = 7;
-
 var menuData = [];
 var menuIdx = 0;
 var todayYyyyM;
@@ -93,41 +93,25 @@ function getMenuFromLinkData(yyyy_m) {
 
 function writeFirstDay() {
 	// メニューを書く
-		setMenuToTarget(0);
-		setMenuToTarget(1);
-		setMenuToTarget(2);
+	setMenuToTarget(0);
+	setMenuToTarget(1);
+	setMenuToTarget(2);
 	setMenuToTarget(3);
-			setMenuToTarget(4);
-					setMenuToTarget(5);
-							setMenuToTarget(6);
+	setMenuToTarget(4);
+	setMenuToTarget(5);
+	setMenuToTarget(6);
 }
 
 function setDateLabel(targetIdx) {
-	var targetDateDiv = $('li#day' + targetIdx + ' .days');
-	targetDateDiv.text(menuData[targetIdx][2] + '/' + menuData[targetIdx][3] + ' (' + menuData[targetIdx][4] + ')');
-	var targetSpecialDiv = $('li#day' + targetIdx + ' .special');
-	if (menuData[targetIdx][11] != undefined) {
-			targetSpecialDiv.text(menuData[targetIdx][11]);	
-	}
-	var targetGcalDiv = $('li#day' + targetIdx + ' .gcal');	
-	var monthslice = (("0" + menuData[targetIdx][2]).slice(-2));
-	var MailDate = menuData[targetIdx][1] + monthslice + menuData[targetIdx][3];
-	targetGcalDiv.html('<a href="https://www.google.com/calendar/gp?pli=1#~calendar:view=e&bm=1&action=TEMPLATE&text=オガルコリマインダー&dates=' + 
-	MailDate + '/' + MailDate + 
-	'&details=' + 
-	menuData[targetIdx][5] + '%0D%0A' + 
-	menuData[targetIdx][6] + '%0D%0A' + 
-	menuData[targetIdx][7] + '%0D%0A' + 
-	menuData[targetIdx][8] + '%0D%0A' + 
-	menuData[targetIdx][9] + '%0D%0A' + 
-	menuData[targetIdx][10] + '%0D%0A' + 
-	menuData[targetIdx][11] + '%0D%0A' +  
-	'&trp=undefined&trp=true&sprop=" target="_blank"><i class="material-icons">today</i></a>');
+	var targetDateDiv = $('#day' + targetIdx + ' .days');
+	targetDateDiv.html('<a class="list-group-item" data-toggle="collapse" data-parent="#ogaruco" href="#lg' + targetIdx +'">' +  
+	menuData[targetIdx][2] + '/' + menuData[targetIdx][3] + ' (' + menuData[targetIdx][4] + ')'
+	+ '</a>');
 }
 
 function setMenuToTarget(targetIdx) {
-	var targetLi = $('li#day' + targetIdx);
-	var divMenu = $('<div class="collapsible-body">');
+	var targetLi = $('#lg' + targetIdx);
+	var divMenu = $('<div class="panel-body">');
 	if (menuData[targetIdx][5] != undefined) {
 		divMenu.append($('<div>' + menuData[targetIdx][5]  + '</div>'));
 	}
@@ -149,6 +133,18 @@ function setMenuToTarget(targetIdx) {
 	if (menuData[targetIdx][11] != undefined) {
 		divMenu.append($('<div>' + menuData[targetIdx][11]  + '</div>'));
 	}
+	var monthSlice = (("0" + menuData[targetIdx][2]).slice(-2));
+	var daySlice = (("0" + menuData[targetIdx][3]).slice(-2));
+	var MailDate = menuData[targetIdx][1] + monthSlice + daySlice;
+	divMenu.append($('<a href="https://www.google.com/calendar/gp?pli=1#~calendar:view=e&bm=1&action=TEMPLATE&text=オガルコリマインダー&dates=' + MailDate + '/' + MailDate + '&details=' + 
+	menuData[targetIdx][5] + '%0D%0A' + 
+	menuData[targetIdx][6] + '%0D%0A' + 
+	menuData[targetIdx][7] + '%0D%0A' + 
+	menuData[targetIdx][8] + '%0D%0A' + 
+	menuData[targetIdx][9] + '%0D%0A' + 
+	menuData[targetIdx][10] + '%0D%0A' + 
+	menuData[targetIdx][11] + '%0D%0A' +  
+	'&trp=undefined&trp=true&sprop=" target="_blank"  class="btn btn-default center-block" role="button">Googleカレンダーに登録</a>'));
 	 $(targetLi).append(divMenu);
 }
 
