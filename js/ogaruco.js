@@ -1,11 +1,13 @@
 //! ogaruco.js
-//! version : 1.1
+//! version : 1.2
 //! authors : howmori
 //! license : MIT
 //! howml.org
 
 // LinkdataのデータセットIDを入力
 var ldDataset = 'rdf1s4545i';
+// Linkdataに搭載されているデータセットのテーブル名を入力
+var TableDataset = 'rdf1s4545i';
 
 var dIdx = 3;
 var dispDays = 7;
@@ -75,7 +77,7 @@ function linkDataError(error) {
 
 function getMenuFromLinkData(yyyy_m) {
 	return new Promise(function(resolve, reject){
-		var tableName = 'hkd_mori_kyushoku_' + yyyy_m;
+		var tableName = TableDataset + yyyy_m;
 		var dataUrl = 'http://linkdata.org/api/1/' + ldDataset + '/' + tableName + '_tsv.txt';
 		$.ajax ({
 			type:'GET',
