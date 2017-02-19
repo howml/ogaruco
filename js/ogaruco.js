@@ -75,7 +75,7 @@ function linkDataError(error) {
 
 function getMenuFromLinkData(yyyy_m) {
 	return new Promise(function(resolve, reject){
-		var tableName = 'ogaru_' + yyyy_m;
+		var tableName = 'hkd_mori_kyushoku_' + yyyy_m;
 		var dataUrl = 'http://linkdata.org/api/1/' + ldDataset + '/' + tableName + '_tsv.txt';
 		$.ajax ({
 			type:'GET',
