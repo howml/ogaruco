@@ -7,7 +7,7 @@
 // LinkdataのデータセットIDを入力
 var ldDataset = 'rdf1s4545i';
 // Linkdataに搭載されているデータセットのテーブル名を入力
-var TableDataset = 'rdf1s4545i';
+var TableDataset = 'hkd_mori_kyushoku_';
 
 var dIdx = 3;
 var dispDays = 7;
